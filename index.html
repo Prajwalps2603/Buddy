@@ -12,10 +12,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="top">
 <header class="top">
   <a class="brand" href="index.html"><img src="icon.png" alt="" width="34" height="34"><span>Buddy</span></a>
-  <nav><a href="index.html" aria-current="page">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+  <nav><a href="index.html" aria-current="page">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="index.html#contact">Contact</a></nav>
 </header>
 <main>
   <section class="hero">
@@ -29,7 +29,7 @@
           <a class="btn primary shine" href="buddy.apk" download="Buddy-1.0.0.apk"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.59l3.3-3.3a1 1 0 1 1 1.4 1.42l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 1 1 1.4-1.42l3.3 3.3V4a1 1 0 0 1 1-1Zm-7 15a1 1 0 0 1 1 1v1h12v-1a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1Z"/></svg><span>Download for Android</span></a>
           <a class="btn ghost" href="#install">How to install</a>
         </div>
-        <p class="meta">Version 1.0.0 · 55 MB · Android 8.0+</p>
+        <p class="meta">Version 1.0.0 · 56 MB · Android 8.0+</p>
       </div>
       <div class="stage" aria-hidden="true">
         <svg class="sparks" viewBox="0 0 120 90" aria-hidden="true"><path d="M20 28 L40 70" stroke="url(#k1)"/><path d="M62 12 L56 62" stroke="url(#k2)"/><path d="M104 34 L74 66" stroke="url(#k3)"/><defs><linearGradient id="k1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3cf0c0"/><stop offset="1" stop-color="#19b39a"/></linearGradient><linearGradient id="k2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4fb6ff"/><stop offset="1" stop-color="#2a5bf5"/></linearGradient><linearGradient id="k3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b56dff"/><stop offset="1" stop-color="#7b2cff"/></linearGradient></defs></svg>
@@ -54,6 +54,13 @@
 
   <section class="wrap marquee" aria-label="What Buddy does">
     <div class="track"><span>💸 Expenses</span><span>📊 Budgets</span><span>🏦 Accounts</span><span>🎯 Savings goals</span><span>🤝 Owed to me</span><span>📅 Calendar</span><span>⏰ Reminders</span><span>🔐 Documents vault</span><span>🧾 Receipts</span><span>📝 Notes</span><span>📧 Bank email import</span><span>📈 Analytics</span><span>🎓 Student mode</span><span>📶 Offline</span><span aria-hidden="true">💸 Expenses</span><span aria-hidden="true">📊 Budgets</span><span aria-hidden="true">🏦 Accounts</span><span aria-hidden="true">🎯 Savings goals</span><span aria-hidden="true">🤝 Owed to me</span><span aria-hidden="true">📅 Calendar</span><span aria-hidden="true">⏰ Reminders</span><span aria-hidden="true">🔐 Documents vault</span><span aria-hidden="true">🧾 Receipts</span><span aria-hidden="true">📝 Notes</span><span aria-hidden="true">📧 Bank email import</span><span aria-hidden="true">📈 Analytics</span><span aria-hidden="true">🎓 Student mode</span><span aria-hidden="true">📶 Offline</span></div>
+  </section>
+
+  <section class="wrap trust" aria-label="Buddy in numbers">
+    <div class="reveal"><b>0</b><span>Buddy servers holding your data</span></div>
+    <div class="reveal"><b>AES-256</b><span>Encryption, on your phone</span></div>
+    <div class="reveal"><b>₹0</b><span>Free to use, with no ads</span></div>
+    <div class="reveal"><b>1</b><span>Folder Buddy can open in your Drive</span></div>
   </section>
 
   <section class="wrap" id="features">
@@ -122,8 +129,37 @@
         <p class="qr-title">On a computer?</p>
         <canvas id="qr" width="180" height="180" aria-label="QR code that downloads Buddy"></canvas>
         <p class="muted small">Scan with your phone’s camera to download.</p>
-        <details><summary>Check the file</summary><code>SHA-256 c13db98259a196d08b074c2badc72c7c8f78b9fdc0a797c179bad1446435d357</code></details>
+        <details><summary>Check the file</summary><code>SHA-256 3a748b6dc7825b9eabe31aad92f6dfa65f218c505d8d7e39e331773af790290d</code></details>
       </aside>
+    </div>
+  </section>
+
+  <section class="wrap" id="faq">
+    <p class="eyebrow center reveal">Good questions</p>
+    <h2 class="center reveal">Before you install</h2>
+    <div class="faq">
+      <details class="reveal"><summary>Is Buddy really free?</summary><p>Yes. Buddy is free to use and shows no ads. It has no servers to pay for, because your data lives in your own Google account.</p></details>
+      <details class="reveal"><summary>Why isn’t it on the Play Store? Is the download safe?</summary><p>Buddy is shared directly as an Android app file for now. Android shows a warning for any app installed from outside the Play Store. To be sure your copy hasn’t been changed, compare its SHA-256 with the one under <a href="#install">On a computer?</a></p></details>
+      <details class="reveal"><summary>Where is my data stored?</summary><p>In a folder called <b>Buddy</b> in your own Google Drive, encrypted on your phone with AES-256 before it’s uploaded. Buddy can only open the files it created, never the rest of your Drive. <a href="privacy.html#s3">How Drive is used →</a></p></details>
+      <details class="reveal"><summary>What if I forget my passkey?</summary><p>Use the recovery code you wrote down when you set up your vault. If you lose both, nobody can unlock your files, including the developer. That’s what keeps them private.</p></details>
+      <details class="reveal"><summary>Does Buddy read my email?</summary><p>Only if you turn on <b>Bank email import</b>, which is off by default. Buddy then reads bank UPI alerts, read-only and on your phone, and saves only the transaction. <a href="privacy.html#s10">Read the details →</a></p></details>
+      <details class="reveal"><summary>Can I use Buddy on more than one phone?</summary><p>Yes. Sign in with the same Google account and enter your passkey once on the new phone. Buddy keeps your devices in step and works offline in between.</p></details>
+    </div>
+  </section>
+
+  <section class="wrap" id="contact">
+    <div class="contact reveal">
+      <div>
+        <p class="eyebrow">Say hello</p>
+        <h2>Questions? Talk to the person who built it.</h2>
+        <p class="muted">Found a bug, have an idea, or want to know more about your data? Buddy is made by one developer, and every message is read personally.</p>
+        <div class="maker"><span class="avatar" aria-hidden="true">PN</span><p><b>Prajwal Nair</b><small>Developer of Buddy</small></p></div>
+      </div>
+      <div class="ways">
+        <div class="way wa"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L3 21l1.5-5.4A8.5 8.5 0 1 1 21 12Z"/><path d="M9 9.5c.5 2.3 2.2 4.1 4.5 4.8"/></svg></span><a class="way-link" href="https://wa.me/918618176469"><b>WhatsApp</b><small>Chat on 86181 76469</small></a><span class="go" aria-hidden="true">→</span></div>
+        <div class="way call"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1Z"/></svg></span><a class="way-link" href="tel:+918618176469"><b>Call</b><small>+91 86181 76469</small></a><span class="go" aria-hidden="true">→</span></div>
+        <div class="way mail"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><a class="way-link" href="mailto:prajwalps2603@gmail.com?subject=Buddy%20support"><b>Email</b><small>prajwalps2603<wbr>@gmail.com</small></a><button class="copy" type="button" data-copy="prajwalps2603@gmail.com">Copy</button></div>
+      </div>
     </div>
   </section>
 
@@ -137,25 +173,33 @@
     </div>
   </section>
 </main>
-<a class="sticky-dl" href="buddy.apk" download="Buddy-1.0.0.apk"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.59l3.3-3.3a1 1 0 1 1 1.4 1.42l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 1 1 1.4-1.42l3.3 3.3V4a1 1 0 0 1 1-1Zm-7 15a1 1 0 0 1 1 1v1h12v-1a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1Z"/></svg><span>Download Buddy · 55 MB</span></a>
+<a class="sticky-dl" href="buddy.apk" download="Buddy-1.0.0.apk"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.59l3.3-3.3a1 1 0 1 1 1.4 1.42l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 1 1 1.4-1.42l3.3 3.3V4a1 1 0 0 1 1-1Zm-7 15a1 1 0 0 1 1 1v1h12v-1a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1Z"/></svg><span>Download Buddy · 56 MB</span></a>
 <footer class="foot">
-  <div class="wrap foot-grid">
-    <div>
-      <a class="brand" href="index.html"><img src="icon.png" alt="" width="28" height="28"><span>Buddy</span></a>
-      <p class="muted">Better Planning. Happier You.</p>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="index.html"><img src="icon.png" alt="" width="30" height="30"><span>Buddy</span></a>
+        <p>Better Planning. Happier You.</p>
+        <p class="muted small">Free, private and ad-free. Made with care in India.</p>
+      </div>
+      <div>
+        <h3>Product</h3>
+        <ul><li><a href="index.html#features">Features</a></li><li><a href="index.html#privacy">How privacy works</a></li><li><a href="index.html#install">Install</a></li><li><a href="index.html#faq">FAQ</a></li></ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul><li><a href="https://wa.me/918618176469">WhatsApp 86181 76469</a></li><li><a href="tel:+918618176469">+91 86181 76469</a></li><li><a href="mailto:prajwalps2603@gmail.com">prajwalps2603<wbr>@gmail.com</a></li></ul>
+      </div>
+      <div>
+        <h3>Legal</h3>
+        <ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li><li><a href="privacy.html#s11">Google API data use</a></li></ul>
+      </div>
     </div>
-    <div>
-      <h3>Contact</h3>
-      <p><a href="tel:+918618176469">+91 86181 76469</a><br>
-      <a href="https://wa.me/918618176469">WhatsApp 86181 76469</a><br>
-      <a href="mailto:prajwalnair2603@gmail.com">prajwalnair2603@gmail.com</a></p>
-    </div>
-    <div>
-      <h3>Legal</h3>
-      <p><a href="privacy.html">Privacy Policy</a><br><a href="terms.html">Terms of Service</a></p>
+    <div class="foot-bottom">
+      <p>© 2026 Prajwal Nair. Buddy is not affiliated with Google. Google Drive, Google Sheets and Gmail are trademarks of Google LLC.</p>
+      <a href="#top">Back to top ↑</a>
     </div>
   </div>
-  <p class="wrap muted small" style="margin-top:20px">© 2026 Prajwal Nair. Buddy is not affiliated with Google. Google Drive, Google Sheets and Gmail are trademarks of Google LLC.</p>
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
 <script src="site.js" defer></script>

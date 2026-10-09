@@ -33,4 +33,34 @@
   if (bar && hero && 'IntersectionObserver' in window) {
     new IntersectionObserver(([e]) => bar.classList.toggle('show', !e.isIntersecting)).observe(hero);
   }
+  // Reading progress on the legal pages.
+  const progress = document.querySelector('.progress');
+  if (progress) {
+    const update = () => {
+      const h = document.documentElement;
+      progress.style.transform = `scaleX(${h.scrollTop / Math.max(1, h.scrollHeight - h.clientHeight)})`;
+    };
+    addEventListener('scroll', update, { passive: true });
+    update();
+  }
+  // Highlight the section being read in the side menu.
+  const links = new Map([...document.querySelectorAll('.side .toc a')].map((a) => [a.getAttribute('href').slice(1), a]));
+  if (links.size && 'IntersectionObserver' in window) {
+    const spy = new IntersectionObserver((entries) => entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      links.forEach((a) => a.classList.remove('on'));
+      links.get(e.target.id)?.classList.add('on');
+    }), { rootMargin: '-25% 0px -65% 0px' });
+    links.forEach((_, id) => { const s = document.getElementById(id); if (s) spy.observe(s); });
+  }
+  // Copy the email address.
+  document.querySelectorAll('[data-copy]').forEach((b) => b.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(b.dataset.copy);
+      b.textContent = 'Copied ✓';
+    } catch {
+      b.textContent = b.dataset.copy;
+    }
+    setTimeout(() => { b.textContent = 'Copy'; }, 1800);
+  }));
 })();
